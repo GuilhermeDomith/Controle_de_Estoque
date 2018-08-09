@@ -1,0 +1,11 @@
+{
+  "name": "controle_embalagens",
+  "version": "1.0.0",
+  "description": "Aplicação para controle do estoque de embalagens",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Guilherme Domith Ribeiro Coelho",
+  "license": "ISC"
+}
