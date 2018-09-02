@@ -1,15 +1,5 @@
-var http = require('http');
+var app = require('./src/config/server');
 
-var server = http.createServer( function(req, res){
-
-    switch (req.url) {
-        case '/': 
-            break;
-        case '/teste':
-            res.end('<html><body><h1>TESTE</h1></body></html>');
-        default:
-            break;
-    }
+app.listen(3000, '127.0.0.1', function(){
+    console.log('Servidor iniciado');
 });
-
-server.listen(3000);
