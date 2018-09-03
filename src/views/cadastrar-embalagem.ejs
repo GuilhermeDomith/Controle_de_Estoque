@@ -1,0 +1,43 @@
+<div id="pagina-entrada-embalagens">
+
+    <div class="card grande-painel">
+        <form action="/embalagens/salvar" method="GET">
+            <div class="card-content">
+                <h4 class="card-title red-text">Cadastrar Embalagem</h4>
+
+                <div class="row">
+                    <div class="col-12 input-field">
+                        <input name="descricao" id="descricao" type="text">
+                        <label for="descricao">Descrição da Embalagem</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4 input-field">
+                        <select name="capacidade" >
+                            <option value="" disabled selected> </option>
+                            <option value="5 Kg">5 Kg</option>
+                            <option value="1 Kg">1 Kg</option>
+                            <option value="500 gr">500 gr</option>
+                            <option value="400 gr">400 gr</option>
+                        </select>
+                        <label>Capacidade</label>
+                    </div>
+                    <div class="col-4 input-field">
+                        <input name="quantidade" id="quantidade" type="number">
+                        <label for="quantidade">Quantidade em Estoque</label>
+                    </div>
+                    <div class="col-4 input-field">
+                        <input name="gasto_semana" id="gasto_semana" type="number">
+                        <label for="gasto_semana">Gasto por Semana</label>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card-action">
+                <button type="submit" class="btn red waves-effect waves-orange">SALVAR</button>
+            </div>
+        </form>
+    </div>
+
+    <%- include('listar-embalagens') %>
+</div>

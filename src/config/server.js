@@ -1,16 +1,17 @@
 var express = require('express');
 var consign = require('consign');
+
 var app = express();
+app.set('view engine', 'ejs');
+app.set('views', './src/views');
+app.use(express.static('./src/public'));
 
 /*  
-    Utilizar para view engines
-    app.set('view engine', 'ejs');
-    app.set('views', './src/views');
+    Sem utilizar view engines
+    app.use(express.static('./src/public'));
+    app.use(express.static('./src/views'));
 
 */
-
-app.use(express.static('./src/public'));
-app.use(express.static('./src/views'));
 
 consign().include('src/routes')
         .then('src/models')

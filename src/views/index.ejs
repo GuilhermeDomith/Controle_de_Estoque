@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link rel="stylesheet" href="./css/simple-grid.min.css">
+
+    <title>Controle de Embalagens</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            vertical-align: baseline;
+            list-style: none;
+            border: 0
+        }
+
+        body {
+            background-color: #fafafa;
+        }
+
+        main {
+            padding-left: 300px;
+        }
+
+        .grande-painel {
+            margin: 20px;
+        }
+
+        .card-action {
+            text-align: right;
+        }
+
+        .grande-painel .card-content .card-title {
+            margin-bottom: 30px;
+        }
+
+        table tbody tr td:first-child {
+            text-align: left !important;
+        }
+
+        footer {
+            padding: 50px;
+        }
+
+
+        @media(max-width: 992px) {
+
+            main {
+                padding-left: 0;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <%- include('header') %>
+    </header>
+    <main>
+
+        <%- include(template) %>
+
+        <div class="fixed-action-btn">
+            <a class="btn-floating btn-large red waves-effect waves-orange">
+                <i class="material-icons">local_printshop</i>
+            </a>
+        </div>
+
+        <footer>
+
+        </footer>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" 
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+    </script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

@@ -1,9 +1,10 @@
-module.exports.embalagens = function(app, req, res){
+module.exports.paginaInicial = function(app, req, res){
     var embalagemDAO = new app.src.models.EmbalagemDAO();
-    embalagemDAO.salvarEmbalagem('{nome: "Sacola de 1k"}');
-    embalagemDAO.salvarEmbalagem('{nome: "Sacola de 2k"}');
-
+    
     embalagemDAO.getEmbalagens(function(err, data){
-        res.end(data);
+        if(data.length == 0) data = null;
+        else data = JSON.parse('['+data+']');
+        
+        res.render('index.ejs', {template: 'cadastrar-embalagem', data: data});    
     });
 }

@@ -6,10 +6,13 @@ class EmbalagemDAO{
         this.arquivo = 'embalagens.txt';
     }
 
-    salvarEmbalagem(embalagem){
-        fs.appendFile(this.arquivo, embalagem, function(err){
-            if(err) throw 'Erro ao salvar embalagem';
-        });
+    salvar(embalagem, callback){
+        var stats = fs.statSync(this.arquivo);
+
+        if(stats.size > 0)
+            embalagem = ','+embalagem;
+
+        fs.appendFile(this.arquivo, embalagem, callback);
     }
 
     /** callback err, data. */

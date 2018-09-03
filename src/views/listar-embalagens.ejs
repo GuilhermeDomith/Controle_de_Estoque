@@ -1,0 +1,24 @@
+<% if(data != null) { %>
+    <div class="card grande-painel">
+        <table class="striped centered">
+            <thead>
+                <th>Descrição</th>
+                <th>Capacidade</th>
+                <th>Quant. em Estoque</th>
+                <th>Gasto por Semana</th>
+                <th>Última Atualização</th>
+            </thead>
+            <tbody>
+                <% data.forEach(function(embalagem){ %>
+                <tr>
+                    <td><%= embalagem.descricao %></td>
+                    <td><%= embalagem.capacidade %></td>
+                    <td><%= embalagem.quantidade %></td>
+                    <td><%= embalagem.gasto_semana %></td>
+                    <td>10/10/2012</td>
+                </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </div>
+<% } %>

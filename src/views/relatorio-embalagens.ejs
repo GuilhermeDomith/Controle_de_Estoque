@@ -1,0 +1,20 @@
+<div id="pagina-relatorio-embalagens">
+    <div class="card grande-painel">
+        <table class="striped centered">
+            <thead>
+                <th>Descrição</th>
+                <th>Capacidade</th>
+                <th>Previsão de Término</th>
+            </thead>
+            <tbody>
+                <% data.forEach(function(embalagem){ %>
+                    <tr>
+                        <td><%= embalagem.descricao %></td>
+                        <td><%= embalagem.capacidade %></td>
+                        <td><%= (embalagem.quantidade / embalagem.gasto_semana) / 4 %></td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </div>
+</div>
